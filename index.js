@@ -46,7 +46,7 @@ client.on(Events.GuildMemberUpdate, async (oldMember, newMember) => {
 async function applyFlag(member, flag) {
   const currentNick = member.nickname;
   const base = currentNick
-    ? currentNick.replace(/ 🇪🇸| 🇲🇽| 🇦🇷| 🇨🇴| 🇨🇱| 🇧🇴| 🇵🇪| 🇻🇪/g, "").trim()
+    ? currentNick.replace(/ 🇪🇸| 🇲🇽| 🇦🇷| 🇨🇴| 🇨🇱| 🇧🇴| 🇵🇪| 🇻🇪| 🇪🇨| 🇺🇾/g, "").trim()
     : member.user.username;
 
   const newNick = `${base} ${flag}`.slice(0, 32);
@@ -64,7 +64,7 @@ async function cleanFlags(member) {
   if (!currentNick) return;
 
   const base = currentNick
-    .replace(/ 🇪🇸| 🇲🇽| 🇦🇷| 🇨🇴| 🇨🇱| 🇧🇴| 🇵🇪| 🇻🇪/g, "")
+    .replace(/ 🇪🇸| 🇲🇽| 🇦🇷| 🇨🇴| 🇨🇱| 🇧🇴| 🇵🇪| 🇻🇪| 🇪🇨| 🇺🇾/g, "")
     .trim();
 
   try {
